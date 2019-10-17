@@ -7,7 +7,8 @@ function gcd(a,b){
 	var c= 0;
 	if(a<b){
 		c=a
-		a=bb=c
+		a=b
+		b=c
 	}if (a===b){
 		return a
 	}if (a===0){
