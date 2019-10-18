@@ -36,8 +36,10 @@ middle (instructors)
  function multiplied (array){
  		var arr = [];
        each(array, function(ele,i){
-       	if (i%2===0)
-       	arr.push(ele*2);
+       	if (i%2===0){
+         arr.push(ele*2);
+       	}
+       
        }); 
        return arr;
  } 
