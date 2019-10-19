@@ -18,16 +18,19 @@ function reverse (string){
 }
 
 
-function same (array){
-	var arr=[];
-	var sam=array[0].length
-	for (var i=0; i<array.length;i++ ){
-		if (sam=== array[i].length){
-			
-			arr.push(array[i])
-			
 
+
+
+function same(array){
+	var tab=[];
+	for (var i=0;i<array.length;i++){
+		for (var j=i+1; j<array.length; j++){
+			if ((array[i].length===array[j].length)&& tab.indexOf(array[i])===-1 && tab.indexOf(array[j])===-1){
+				tab.push(array[i],array[j])
+				
+
+			}
 		}
 	}
-	return arr
+	return tab
 }
