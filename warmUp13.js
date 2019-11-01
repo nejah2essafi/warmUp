@@ -16,6 +16,8 @@
             C          100
             D          500
             M          1,000 
+
+
     
     2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
         Examples:
@@ -30,4 +32,72 @@
             filter_list([1,2,'a','b']) == [1,2]
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+
+
 */
+
+
+function convertRoman (str){
+	var sum=0;
+	var array=str.split("")
+	for (var i=0; i<array.length; i++){
+		if (array[i] === "I"){
+			if(array[0]==="I" && array[1]!== "I"){
+			array[i]= -1	
+		}else {
+			array[i]=1
+		}
+			
+		}else if (array[i]==="V"){
+			array[i]=5
+		}else if (array[i]==="X"){
+			array[i]= 10
+		}else if(array[i]==="L"){
+			array[i]= 50
+		}else if (array[i]==="C"){
+			array[i] = 100
+		}else if (array[i]==="D"){
+			array[i]=500
+		}else if (array[i]==="M"){
+			array[i]=1000
+		}
+	}
+	for (var j =0; j<array.length; j++){
+		sum+=array[j]
+	}
+	return sum;
+	
+}
+
+ // 3. In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+ //        Example
+
+ function toCamelCase(str){
+	var array=str.split("")
+		for(var i=0; i<array.length; i++){
+			if (array[i]==="-" ||array[i]==="_"){
+				array[i+1]=array[i+1].toUpperCase()
+				
+
+				array.splice(i,1)
+				
+			}
+		}
+
+	return array.join("")
+}
+
+function filter (array){
+	var arr=[]
+	for (var i=0 ;i<array.length; i++){
+		if (typeof(array[i])==="number"){
+			arr.push(array[i])
+		}
+	}
+	return arr
+}
+		
+
+
+ 
