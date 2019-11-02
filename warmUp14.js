@@ -21,8 +21,8 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 var maxProfit = function(prices) {
   // YOUR CODE HERE
   var max= 0
-  for (var i =0; i<prices.length; i++){
-  	for (var j=1; j<prices.length;j++ ) {
+  for (var i =0; i<prices.length-1; i++){
+  	for (var j=i+1; j<prices.length;j++ ) {
   		if (prices[j]-prices[i]>max && prices[j]>prices[i]){
   			max = prices[j]-prices[i]
   		}
