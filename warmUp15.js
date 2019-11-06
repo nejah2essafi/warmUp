@@ -13,3 +13,21 @@ function reverseStr (str) {
 	}
 	return result;
 }
+
+function reverseStr1 (str) {
+	var array=[]
+	var res=""
+	var result = "";
+	for (var j in str){
+		if(str[j]=== " ")
+	res+=(str.substring(0,j+1))	
+
+
+	}
+	
+	for (var i = array.length-1; i >= 0; i--) {
+		result += " "+array[i];
+
+	}
+	return result;
+}
