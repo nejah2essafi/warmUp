@@ -27,6 +27,24 @@
 
 // ​
 // ​
-// var calculateTime = function(keyboard, word) {
-    
-// };
+ var calculateTime = function(keyboard, word) {
+ 	word.toLowerCase()
+ 	var result=0
+ 	var len = i-j
+ 	var array=keybord.split("")
+ 	for var (k in word){
+ 		for (var i=0 ; i<array.length; i++){
+ 			for(var j=i+1;j<array.length; j++){
+ 			if (word[k]===array[i])	{
+ 				if((len)<0)
+ 					len=-1*len
+ 				result+= len
+
+ 			}
+ 			}
+ 			
+ 		}
+ 		
+ 	}
+ 	return result;
+};
