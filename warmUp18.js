@@ -10,3 +10,25 @@
 
 // input   =  "aaaaaaaaaaaa"
 // result  =  "123456789101112"
+function code(string){
+	var result=""
+	var array=string.split("")
+	var obj ={};
+	for (var i=0; i<array.length; i++){
+		if (obj[array[i]]=== undefined){
+			obj[array[i]]=1
+		}else {
+			obj[array[i]]+=1
+		}
+	}
+	for(var i =0; i<array.length;i++){
+		for(var j =1 ; j<obj[array[i]]+1;j++){
+			
+			result+=j
+			
+		}
+
+	}
+	return result
+	
+}
